@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
-    <SearchCompany @input-corporation="nuevaCorp" />
+    <SearchCompany @input-corporation="nuevaCorp"/>
+    <button @click="ResertCompany" >Reset Searcher Company</button>
     <MembersList :corpoName="corporation" />
   </div>
 </template>
@@ -18,24 +19,27 @@ export default defineComponent({
   },
   data: () => ({
     corporation: "Lemoncode",
-    container:"",
   }),
   mounted() {
-    this.container=this.corporation
     console.log(`La compañia de la lista cargar es ${this.corporation}`)
+    if (localStorage.corporation) {
+      this.corporation = localStorage.corporation;
+    }
   },
   methods: {
     nuevaCorp(InputV: string) {
       console.log(`La compañia de la lista al inicio es ${this.corporation}`)
-
-      if(this.container===InputV){
+      if( localStorage.corporation===InputV){
         console.log("No hago nada mismo valor")
       }else{ 
         this.corporation = InputV
-        this.container=InputV
         console.log(`La compañia de la lista al final es ${this.corporation}`)
+        localStorage.corporation = this.corporation;
       }
     },
+    ResertCompany(){
+     this.corporation="Lemoncode";
+    }
   },
 });
 </script>

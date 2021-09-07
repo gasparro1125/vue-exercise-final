@@ -41,7 +41,6 @@ export default defineComponent({
   props: {
     corpoName: {
       type: String,
-      default: "lemoncode",
     },
   },
   data:()=> ({
