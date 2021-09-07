@@ -1,3 +1,4 @@
+<!--
 <template>
   <div class="home">
     <MembersList />
@@ -15,25 +16,24 @@ export default defineComponent({
   },
 });
 </script>
+-->
 
 
-
-<!--
 
 <template>
-  <div class="list-page">
-    <MembersWrapper />
+  <div class="home">
+    <Wrapper />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import MembersWrapper from "@/components/members/MembersWrapper.vue";
-export default Vue.extend({
+import { defineComponent } from "vue";
+import Wrapper from "../components/Wrapper.vue";
+
+export default defineComponent({
   name: "Home",
   components: {
-    MembersWrapper,
+    Wrapper,
   },
 });
 </script>
--->

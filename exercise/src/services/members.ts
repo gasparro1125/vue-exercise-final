@@ -1,7 +1,6 @@
 import { MembersListDetails, MembersDetailsPage } from '@/types';
 
 export const listCallService ={
-    /*
     async get ():Promise<MembersListDetails[]> {
         const members =await fetch('https://api.github.com/orgs/Lemoncode/members',{
             headers:{
@@ -10,7 +9,7 @@ export const listCallService ={
         }
         ).then(response=>response.json())
         return members;
-    },*/
+    },
 
     async getMember(
         login: MembersDetailsPage["login"]): Promise<MembersDetailsPage | undefined> {
