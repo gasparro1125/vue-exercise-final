@@ -45,7 +45,7 @@ export default defineComponent({
       list: [] as MembersListDetails[],
   }),
   async created() {
-    this.list = await listCallService.get();
+    this.list = await listCallService.getCompany("lemoncode");
   },
   computed: {
     totalMembers(): number {

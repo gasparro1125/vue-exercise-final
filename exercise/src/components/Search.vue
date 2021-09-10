@@ -2,7 +2,8 @@
   <div class="search-Component">
     <form @submit.prevent>
       <label>Corpo </label>
-      <input v-model="CorpSercher" @keyup.enter="searchCompany"/>
+      <input v-model="CorpSercher"/>
+      <button @click="searchCompany" >Buscar compañia</button>
     </form>
   </div>
 </template>
@@ -12,7 +13,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "searchCompany",
   data: () => ({
-    CorpSercher: "",
+    CorpSercher: "Lemoncode",
   }),
   methods: {
     searchCompany() {
