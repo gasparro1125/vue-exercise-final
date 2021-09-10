@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <SearchCompany @input-corporation="nuevaCorp"/>
-    <button @click="ResertCompany" >Reset Searcher Company</button>
     <MembersList :corpoName="corporation" />
   </div>
 </template>
@@ -37,9 +36,6 @@ export default defineComponent({
         localStorage.corporation = this.corporation;
       }
     },
-    ResertCompany(){
-     this.corporation="Lemoncode";
-    }
   },
 });
 </script>
