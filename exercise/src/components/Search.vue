@@ -13,7 +13,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "searchCompany",
   data: () => ({
-    CorpSercher: "Lemoncode",
+    CorpSercher: "",
   }),
   methods: {
     searchCompany() {
