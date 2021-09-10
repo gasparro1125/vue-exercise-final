@@ -34,8 +34,6 @@
 import { defineComponent } from "vue";
 import { MembersListDetails } from "../types";
 import { listCallService } from "../services/members";
-
-
 export default defineComponent({
   name: "MembersList",
   props: {
@@ -70,5 +68,4 @@ export default defineComponent({
 </script>
 
 <style>
-
 </style>
